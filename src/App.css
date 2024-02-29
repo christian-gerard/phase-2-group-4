@@ -20,6 +20,7 @@
   letter-spacing:15px;
   padding: 20px;
 }
+
 #side-menu {
   background: lightblue;
   border: solid 1px black;
@@ -93,4 +94,19 @@
 
   color: pink;
   
+}
+
+.answers {
+
+  display:flex;
+  flex-direction:column;
+
+  
+}
+
+.question-card {
+  border: solid 1px pink;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px;
 }

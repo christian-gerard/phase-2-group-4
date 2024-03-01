@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useOutletContext } from 'react-router-dom';
 import QuestionCard from './QuestionCard'
+import CountdownTimer from './Timer';
 
 function Question() {
     const questions = useOutletContext()
@@ -50,7 +51,7 @@ function Question() {
                 <option value='movies'>Movies</option>
                 <option value='history'>History</option>
             </select>
-
+            <CountdownTimer>Timer</CountdownTimer>
             <div>
                 {renderQuestion()[questionNumber]}
             </div>

@@ -13,12 +13,12 @@
         {
             "id": 2,
             "type": "geography",
-            "question" : "What is the capital of Poland?",
+            "question" : "What is the capital of Iceland?",
             "answer1" : "Warsaw",
             "answer2" : "Vienna",
             "answer3" : "Zagreb",
             "answer4" : "Prague",
-            "correctAnswer": "answer2"
+            "correctAnswer": "answer1"
         },
         {
             "id": 3,
@@ -28,7 +28,7 @@
             "answer2" : "Nile",
             "answer3" : "Yangtze",
             "answer4" : "Mississippi",
-            "correctAnswer": "answer3"
+            "correctAnswer": "answer1"
         },
         {
             "id": 4,
@@ -38,7 +38,7 @@
             "answer2" : "Mount Elbrus",
             "answer3" : "Denali",
             "answer4" : "Mount Logan",
-            "correctAnswer": "answer4"
+            "correctAnswer": "answer1"
         },
         {
             "id": 5,
@@ -48,7 +48,57 @@
             "answer2" : "Japan",
             "answer3" : "South Korea",
             "answer4" : "Vietnam",
-            "correctAnswer": "Warsaw"
+            "correctAnswer": "answer1"
+        },
+        {
+            "id": 6,
+            "type": "history",
+            "question" : "When was the Magna Carta signed?",
+            "answer1" : "China",
+            "answer2" : "Japan",
+            "answer3" : "South Korea",
+            "answer4" : "Vietnam",
+            "correctAnswer": "answer1"
+        },
+        {
+            "id": 7,
+            "type": "history",
+            "question" : "What year did the french-indian war end?",
+            "answer1" : "China",
+            "answer2" : "Japan",
+            "answer3" : "South Korea",
+            "answer4" : "Vietnam",
+            "correctAnswer": "answer1"
+        },
+        {
+            "id": 8,
+            "type": "history",
+            "question" : "Who was the 4th president of the United States?",
+            "answer1" : "China",
+            "answer2" : "Japan",
+            "answer3" : "South Korea",
+            "answer4" : "Vietnam",
+            "correctAnswer": "answer1"
+        },
+        {
+            "id": 9,
+            "type": "history",
+            "question" : "Who was prime Minister of England during WW2",
+            "answer1" : "China",
+            "answer2" : "Japan",
+            "answer3" : "South Korea",
+            "answer4" : "Vietnam",
+            "correctAnswer": "answer1"
+        },
+        {
+            "id": 10,
+            "type": "movies",
+            "question" : "What was Matthew McConaughey's first movie?",
+            "answer1" : "China",
+            "answer2" : "Japan",
+            "answer3" : "South Korea",
+            "answer4" : "Vietnam",
+            "correctAnswer": "answer1"
         }
 
     ]

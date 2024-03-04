@@ -21,6 +21,7 @@ function SideMenu() {
             </div>
 
             {menuOpen ? 
+            <>
             
                 <div id='side-menu-nav-buttons'>
                 
@@ -29,11 +30,29 @@ function SideMenu() {
                 <NavLink to='/addQuestion' className='side-menu-nav'>Add Questions</NavLink>
                 
                 </div>
+
+                <hr></hr>
+
+                <h4>Trivia Options</h4>
+                <div id='trivia-options'>
+
+                <select >
+                    <option>Category Select</option>
+
+                </select>
+                <input type='text' placeholder='# of Questions'></input>
+                <select>
+                    <option>Time Limit</option>
+                </select>
+
+                </div>
+
             
-            
-            
-            
+            </>
+
             : null}
+
+  
 
         </div>
 

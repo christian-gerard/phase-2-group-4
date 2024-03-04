@@ -6,7 +6,7 @@ function Welcome() {
         <div>
             <h1>WELCOME</h1>
             <p>
-                Trivial is a trivia platform where you can  test your knowledtge
+                Trivial is a trivia platform where you can test your knowledge 🤓
             </p>
         </div>
     )

@@ -1,36 +1,36 @@
 import { useState } from 'react';
+import { useOutletContext } from 'react-router-dom'
 
 const initialState = {
-  type: "",
+  category: "",
+  difficulty: "",
   question: "",
-  answer1: "",
-  answer2: "",
-  answer3: "",
-  answer4: "",
-	correctAnswer: "",
+  a: "",
+  b: "",
+  c: "",
+  d: "",
+  answer: "",
 };
 	
 function AddQuestion() {
 	const [formData, setFormData] = useState(initialState);
 	const handleFormChange = (event) => { setFormData({ ...formData, [event.target.name]: event.target.value }) };
-	const handleFormSubmit = (event) => {
-		event.preventDefault();
-		console.log(formData);
-  };
+    const { handleFormSubmit } = useOutletContext()
+
 	
 	return (
-    <section>
+    <section id='add-question'>
+
       <form
         className="form"
         onChange={handleFormChange}
-        onSubmit={handleFormSubmit}
+        onSubmit={(e) => handleFormSubmit(e,formData)}
       >
         <h3>Add your own Question</h3>
-        <label htmlFor="type">
-          Category
-          <br />
-        </label>
-        <select name="type" value={formData.type}>
+
+        <label htmlFor="type">Category</label>
+
+        <select name="category" value={formData.category}>
           <option value="">Select One</option>
           <option value="geography">Geography</option>
           <option value="history">History</option>
@@ -38,81 +38,84 @@ function AddQuestion() {
           <option value="movies">Movies</option>
           <option value="devops">Devops</option>
         </select>
+
+        <label htmlFor="type">Difficulty</label>
+        <select name="difficulty" value={formData.difficulty}>
+            <option value="">Select One</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
         <label htmlFor="question">
-          <br />
-          <br /> Enter Question
-          <br />
+           Enter Question
         </label>
+
         <input
           value={formData.question}
-          style={{ width: 300, height: 100 }}
+
           type="text"
           name="question"
           placeHolder="Question Text"
         />
+
         <label htmlFor="answer1">
-          <br />
-          <br />
-          Answer Choice 1<br />
+          Answer 'A'
         </label>
         <input
-          value={formData.answer1}
+          value={formData.a}
           type="text"
-          style={{ width: 300 }}
-          name="answer1"
-          placeHolder="Answer Choice"
+
+          name="a"
+          placeHolder="A"
         />
+
         <label htmlFor="answer2">
-          <br />
-          <br /> Answer Choice 2<br />
+          Answer 'B'
         </label>
         <input
-          value={formData.answer2}
+          value={formData.b}
           type="text"
-          style={{ width: 300 }}
-          name="answer2"
-          placeHolder="Answer Choice"
+
+          name="b"
+          placeHolder="B"
         />
+
         <label htmlFor="answer3">
-          <br />
-          <br />
-          Answer Choice 3<br />
+          Answer 'C'
         </label>
         <input
-          value={formData.answer3}
-          style={{ width: 300 }}
+          value={formData.c}
+
           type="text"
-          name="answer3"
-          placeHolder="Answer Choice"
+          name="c"
+          placeHolder="C"
         />
+
         <label htmlFor="answer4">
-          <br />
-          <br />
-          Answer Choice 4<br />
+          Answer 'D'
         </label>
         <input
-          value={formData.answer4}
-          style={{ width: 300 }}
+          value={formData.d}
+
           type="text"
-          name="answer4"
-          placeHolder="Answer Choice"
+          name="d"
+          placeHolder="D"
         />
         <label htmlFor="correctAnswer">
-          <br />
-          <br />
           Correct Answer
-          <br />
-          <br />
         </label>
-        <input
-          value={formData.correctAnswer}
-          type="text"
-          name="correctAnswer"
-          placeHolder="Correct Answer"
-        />
-        <br />
-        <br />
+
+        <select name='answer'>
+            <option value=''>Select Answer</option>    
+            <option value='a'>A</option>
+            <option value='b'>B</option>
+            <option value='c'>C</option>
+            <option value='d'>D</option>
+        </select>
+        
         <button type="submit">Add Question</button>
+
       </form>
     </section>
   );

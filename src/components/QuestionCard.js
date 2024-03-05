@@ -1,45 +1,40 @@
 import { useState } from 'react';
+import { useParams, useOutletContext } from 'react-router-dom'
 
-function QuestionCard({id,type,question,answer1,answer2,answer3,answer4,correctAnswer,handleNext,questionNumber}) {
-    const [selectedAnswer, setSelectedAnswer] = useState('')
-    const [isCorrect, setIsCorrect] = useState(false);
+function QuestionCard() {
+
+    const params = useParams();
+    const { questions } = useOutletContext();
 
 
-    const checkAnswer = (e) => {
+    const question = questions.filter((question) => question.id === params.id)[0]
 
-        if(e.target.value === correctAnswer) {
-            setSelectedAnswer(selectedAnswer => e.target.value)
-            setIsCorrect(true)
-            
-        } else {
-            setSelectedAnswer(selectedAnswer => e.target.value)
 
-        }
-        
-
-    }
 
     return(
         <div className='question-card'>
-            <h2>Q.{questionNumber + 1}</h2>
-            <h1>{question}</h1>
-            <div className='answers' onChange={checkAnswer}>
-                {isCorrect ? <h1>"{selectedAnswer}"" is Correct 🎊</h1> : 
+            <h3>{question.question}</h3>
 
-                <>
-                <h1 className={selectedAnswer ? '' : 'hidden'}>{selectedAnswer} is Incorrect😔</h1>
-                <span><input name={`question_${questionNumber}`} type="radio" value={answer1}/>{answer1}</span>
-                <span><input name={`question_${questionNumber}`} type="radio" value={answer2}/>{answer2}</span>
-                <span><input name={`question_${questionNumber}`} type="radio" value={answer3}/>{answer3}</span>
-                <span><input name={`question_${questionNumber}`} type="radio" value={answer4}/>{answer4}</span>
-                </>
+            <div className='question-details'>
+            <span>Difficulty: {question.difficulty}</span>
+            <span>Category: {question.category}</span>
 
-                
-                
-                }
-                
             </div>
-            {isCorrect ? <button onClick={handleNext}>NEXT</button> : null}
+            
+
+
+            <div className='question-answers'>
+                <ol type='A'>
+                    <li>{question.a}</li>
+                    <li>{question.b}</li>
+                    <li>{question.c}</li>
+                    <li>{question.d}</li>
+                </ol>
+
+                <h5> Answer: {question.answer}</h5>
+
+            </div>
+            
         </div>
     )
 }

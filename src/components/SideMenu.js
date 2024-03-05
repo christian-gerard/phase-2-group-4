@@ -21,19 +21,23 @@ function SideMenu() {
             </div>
 
             {menuOpen ? 
+            <>
             
                 <div id='side-menu-nav-buttons'>
                 
-                <NavLink to='/welcome' className='side-menu-nav'>Welcome</NavLink>
-                <NavLink to='/question' className='side-menu-nav'>TRIVIA!</NavLink>
-                <NavLink to='/addQuestion' className='side-menu-nav'>Add Questions</NavLink>
+                <NavLink to='/' className='side-menu-nav'> 🏁 <span> Start</span>  </NavLink>
+                <NavLink to='/questions' className='side-menu-nav'>❓ <span>Questions</span> </NavLink>
+                <NavLink to='/addQuestion' className='side-menu-nav'>➕ <span>Add Questions</span> </NavLink>
+                <NavLink to='/settings' className='side-menu-nav'>⚙️ <span>Settings</span> </NavLink>
                 
                 </div>
+
             
-            
-            
-            
+            </>
+
             : null}
+
+  
 
         </div>
 

@@ -14,13 +14,42 @@ function App() {
 
   },[])
 
+  const handleFormSubmit = (e,formData) => {
+		e.preventDefault();
+
+
+    if(Object.values(formData).includes('')) {
+      alert('Fill out all fields')
+    } else {
+
+      fetch('http://localhost:8000/questions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+  
+      })
+      .then(resp => resp.json())
+      .then(data => {
+
+          setQuestions({...questions, data})
+
+        
+      })
+      .catch(err => console.log(err))
+
+    }
+  };
+
   return (
     <div id="App">
       <SideMenu />
       <div id='main-container'>
 
       <span id='app-title'>TRIVIAL</span>
-      <Outlet context={questions}/>
+      
+      <Outlet context={{questions, handleFormSubmit}}/>
 
       </div>
     </div>

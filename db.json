@@ -275,19 +275,93 @@
             "d" : "Mark Hamill",
             "answer": "b"
         }, 
-
-
-
-
-
-
-
-
-
-        
-
-
-    ]
-    
-
+     {
+      "id": "bc26",
+      "category": "geography",
+      "difficulty": "easy",
+      "question": "Capital of the United States",
+      "a": "Washington DC",
+      "b": "Boston",
+      "c": "New York",
+      "d": "Los Angeles",
+      "answer": "a"
+    },
+    {
+      "id": "4787",
+      "category": "history",
+      "difficulty": "medium",
+      "question": "Who was the Second President of the United States?",
+      "a": "John Adams",
+      "b": "Thomas Jefferson",
+      "c": "Mitch McConnel",
+      "d": "Nancy Pelosi",
+      "answer": "b"
+    },
+    {
+        "id": "47877",
+        "category": "history",
+        "difficulty": "hard",
+        "question": "Who was the Second President of the United States?",
+        "a": "John Adams",
+        "b": "Thomas Jefferson",
+        "c": "Mitch McConnel",
+        "d": "Nancy Pelosi",
+        "answer": "b"
+      },
+      {
+        "id": "478774",
+        "category": "history",
+        "difficulty": "medium",
+        "question": "Who was the Second President of the United States?",
+        "a": "John Adams",
+        "b": "Thomas Jefferson",
+        "c": "Mitch McConnel",
+        "d": "Nancy Pelosi",
+        "answer": "b"
+      },
+      {
+        "id": "473",
+        "category": "history",
+        "difficulty": "medium",
+        "question": "Who was the Second President of the United States?",
+        "a": "John Adams",
+        "b": "Thomas Jefferson",
+        "c": "Mitch McConnel",
+        "d": "Nancy Pelosi",
+        "answer": "b"
+      },
+      {
+        "id": "475",
+        "category": "history",
+        "difficulty": "medium",
+        "question": "Who was the Second President of the United States?",
+        "a": "John Adams",
+        "b": "Thomas Jefferson",
+        "c": "Mitch McConnel",
+        "d": "Nancy Pelosi",
+        "answer": "b"
+      },
+      {
+        "id": "4789",
+        "category": "history",
+        "difficulty": "medium",
+        "question": "Who was the Second President of the United States?",
+        "a": "John Adams",
+        "b": "Thomas Jefferson",
+        "c": "Mitch McConnel",
+        "d": "Nancy Pelosi",
+        "answer": "b"
+      },
+      {
+        "id": "477",
+        "category": "history",
+        "difficulty": "medium",
+        "question": "Who was the Second President of the United States?",
+        "a": "John Adams",
+        "b": "Thomas Jefferson",
+        "c": "Mitch McConnel",
+        "d": "Nancy Pelosi",
+        "answer": "b"
+      }
+  ]
 }

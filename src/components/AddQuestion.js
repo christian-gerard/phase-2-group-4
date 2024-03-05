@@ -26,7 +26,7 @@ function AddQuestion() {
         onChange={handleFormChange}
         onSubmit={(e) => handleFormSubmit(e,formData)}
       >
-        <h3>Add your own Question</h3>
+        <h1>Add your own Question</h1>
 
         <label htmlFor="type">Category</label>
 

@@ -2,10 +2,10 @@
 function Settings() {
 
     return (
-        <div>
+        <div id='settings-container'>
             <h1>TRIVIAL SETTINGS</h1>
 
-            <label>Difficulty</label>
+            <label>Difficulty</label> 
             <select>
                 <option>Select Difficulty</option>
             </select>

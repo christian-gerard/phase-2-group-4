@@ -9,17 +9,19 @@ function Question() {
 
 
 
-    console.log(questions)
+
     
     const renderQuestions = questions.map((question) => <QuestionCard key={question.id} {...question} />)
 
     return(
         <div>
+
             <h1>Questions</h1>
-            <CountdownTimer>Timer</CountdownTimer>
-            <div>
+
+            <div id='view-questions'>
                 {renderQuestions}
             </div>
+
         </div>
     )
 }

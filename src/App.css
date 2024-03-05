@@ -72,6 +72,16 @@
 
 }
 
+#view-questions {
+
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:100%;
+
+  margin:20px;
+}
+
 /* Classes */
 
 .bar1, .bar2, .bar3 {
@@ -107,14 +117,15 @@
 
   color: black;
   text-decoration: none;
-  padding: 20px;
-  margin:20px;
-  font-size:2em;
+  padding: 10px;
+  margin:10px;
+  font-size:1.5em;
 }
 
 .side-menu-nav:hover {
 
   color: pink;
+  text-decoration: underline;
   
 }
 
@@ -128,9 +139,22 @@
 
 .question-card {
   border: solid 1px pink;
-  margin: 20px;
+  margin: 10px;
   border-radius: 20px;
   padding: 20px;
+
+  height: 250px;
+  width:300px;
+}
+
+.question-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.question-details * {
+  margin-left: 10px;
 }
 
 .hidden {

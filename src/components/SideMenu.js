@@ -25,26 +25,11 @@ function SideMenu() {
             
                 <div id='side-menu-nav-buttons'>
                 
-                <NavLink to='/welcome' className='side-menu-nav'>Welcome</NavLink>
-                <NavLink to='/question' className='side-menu-nav'>TRIVIA!</NavLink>
-                <NavLink to='/addQuestion' className='side-menu-nav'>Add Questions</NavLink>
+                <NavLink to='/' className='side-menu-nav'>🏁 Start </NavLink>
+                <NavLink to='/question' className='side-menu-nav'>❓ Questions </NavLink>
+                <NavLink to='/addQuestion' className='side-menu-nav'>➕ Add Questions </NavLink>
+                <NavLink to='/settings' className='side-menu-nav'>⚙️ Settings </NavLink>
                 
-                </div>
-
-                <hr></hr>
-
-                <h4>Trivia Options</h4>
-                <div id='trivia-options'>
-
-                <select >
-                    <option>Category Select</option>
-
-                </select>
-                <input type='text' placeholder='# of Questions'></input>
-                <select>
-                    <option>Time Limit</option>
-                </select>
-
                 </div>
 
             

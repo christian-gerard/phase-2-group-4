@@ -48,6 +48,7 @@ function App() {
       <div id='main-container'>
 
       <span id='app-title'>TRIVIAL</span>
+      
       <Outlet context={{questions, handleFormSubmit}}/>
 
       </div>

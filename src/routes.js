@@ -1,7 +1,8 @@
 import App from './components/App'
-import Welcome from './components/Welcome'
+import Start from './components/Start'
 import Question from './components/Question'
 import AddQuestion from './components/AddQuestion'
+import Settings from './components/Settings'
 import ErrorPage from './components/ErrorPage'
 
 const routes = [
@@ -11,8 +12,12 @@ const routes = [
         errorElement: <ErrorPage />,
         children: [
           {
-            path:'/welcome',
-            element: <Welcome />
+            path:'/',
+            element: <Start />
+          },
+          {
+            path:'/settings',
+            element: <Settings />
           },
           {
             path:'/question',

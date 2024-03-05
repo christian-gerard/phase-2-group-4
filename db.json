@@ -1,81 +1,15 @@
 {
   "questions": [
     {
-      "id": "0c9f",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "",
-      "a": "t",
-      "b": "t",
-      "c": "t",
-      "d": "t",
-      "answer": "b"
-    },
-    {
-      "id": "858b",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "",
-      "a": "t",
-      "b": "t",
-      "c": "t",
-      "d": "t",
-      "answer": "b"
-    },
-    {
-      "id": "d482",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "",
-      "a": "t",
-      "b": "t",
-      "c": "t",
-      "d": "t",
-      "answer": "b"
-    },
-    {
-      "id": "6134",
-      "category": "science",
-      "difficulty": "medium",
-      "question": "What is a quark?",
-      "a": "a",
-      "b": "b",
-      "c": "c",
-      "d": "d",
-      "answer": "b"
-    },
-    {
-      "id": "751b",
-      "category": "",
-      "difficulty": "",
-      "question": "",
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "answer": ""
-    },
-    {
-      "id": "5a3d",
-      "category": "geography",
-      "difficulty": "easy",
-      "question": "What is the capital of Bangkok",
-      "a": "a",
-      "b": "d",
-      "c": "d",
-      "d": "d",
-      "answer": ""
-    },
-    {
-      "id": "2504",
+      "id": "bc26",
       "category": "geography",
       "difficulty": "medium",
-      "question": "What is the capital of Bangkok",
-      "a": "a",
-      "b": "a",
-      "c": "a",
-      "d": "a",
-      "answer": "c"
+      "question": "Capital of the United States",
+      "a": "Washington DC",
+      "b": "Boston",
+      "c": "New York",
+      "d": "Los Angeles",
+      "answer": "a"
     }
   ]
 }

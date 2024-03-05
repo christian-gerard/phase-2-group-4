@@ -3,7 +3,6 @@ function Settings() {
 
     return (
         <div id='settings-container'>
-            <h1>TRIVIAL SETTINGS</h1>
 
             <label>Difficulty</label> 
             <select>
@@ -14,6 +13,10 @@ function Settings() {
             <select>
                 <option>Select Category</option>
             </select>
+
+            <label>Time Limit</label>
+            <input type='time'></input>
+
         </div>
     )
 }

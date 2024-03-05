@@ -20,6 +20,7 @@ function QuestionPreview({id,category,difficulty,question,a,b,c,d,answer}) {
             return '📜'
         }
     }
+    
     return(
         <NavLink to={`/questions/${id}`} className='question-preview-nav'> 
 

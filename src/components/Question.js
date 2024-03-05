@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useOutletContext } from 'react-router-dom';
-import QuestionCard from './QuestionCard'
+import QuestionDetails from './QuestionDetails'
 import CountdownTimer from './Timer';
 import QuestionPreview from './QuestionPreview';
 

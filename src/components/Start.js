@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import QuestionCard from './QuestionCard'
+import Settings from './Settings';
+import Timer from './Timer'
 
 
 function Start() {
@@ -12,18 +15,30 @@ function Start() {
     return (
         <>
         {inGame ? 
+
         <> 
-        <h1>In Game</h1>
+        <Timer />
+
+
+        <QuestionCard />
 
 
         <button onClick={handleStart}>End Game</button>
+        
+    
+
+        
         
         </>
         
         : 
         <> 
+
+
         <h1>Welcome to Trivial </h1> 
         <p>Trivial will ask you trivia questions. You will have to answer under a certain time limit.</p>
+
+        <Settings/>
 
         <button onClick={handleStart}> Start Trivia! </button>
         </>

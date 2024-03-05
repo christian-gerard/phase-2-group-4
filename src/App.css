@@ -45,10 +45,11 @@
 
 }
 
-#settings {
+#settings-container{
   display:flex;
   flex-direction: column;
 }
+
 #side-menu-nav-buttons {
   display:flex;
   flex-direction:column;

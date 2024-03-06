@@ -321,7 +321,11 @@ html,body, #root{
 
 
 
+/* Notifications via Toaster */
 
+.success-notification {
+  background: lightgreen;
+}
 
 
 

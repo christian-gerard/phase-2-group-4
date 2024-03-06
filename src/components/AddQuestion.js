@@ -15,7 +15,8 @@ const initialState = {
 function AddQuestion() {
 	const [formData, setFormData] = useState(initialState);
 	const handleFormChange = (event) => { setFormData({ ...formData, [event.target.name]: event.target.value }) };
-    const { handleFormSubmit } = useOutletContext()
+  const { handleFormSubmit } = useOutletContext()
+  
 
 	
 	return (

@@ -1,26 +1,28 @@
 import { useState, useEffect } from 'react'
 import { Outlet} from 'react-router-dom'
 import SideMenu from './SideMenu'
+import { Toaster, toast } from 'react-hot-toast'
 import '../App.css';
 
 function App() {
   const [questions, setQuestions] = useState([])
 
-
   useEffect(() => {
     fetch('http://localhost:8000/questions')
     .then(resp => resp.json())
     .then(data => setQuestions(data))
-    .catch(err => console.log(err))
+    .catch(err => {
+      console.log(err)
+      toast.error('Unable to Load Questions 😓')
+    })
 
   },[])
 
   const handleFormSubmit = (e,formData) => {
 		e.preventDefault();
 
-
     if(Object.values(formData).includes('')) {
-      alert('Fill out all fields')
+      toast.error('Please fill out all fields 🙏')
     } else {
 
       fetch('http://localhost:8000/questions', {
@@ -31,14 +33,24 @@ function App() {
         body: JSON.stringify(formData)
   
       })
-      .then(resp => resp.json())
+      .then(resp => {
+
+        if(resp.ok){
+          return resp.json()
+        } else {
+          toast.error('Error')
+        }
+      })
       .then(data => {
 
           setQuestions([...questions, data])
 
+          toast.success('Question Added')
+
+
         
       })
-      .catch(err => console.log(err))
+      .catch(err => toast.error('ERROR'))
 
     }
   };
@@ -76,6 +88,8 @@ function App() {
 
         handleEditMode()
 
+        toast.success('Edit Successful')
+
       })
       .catch(err => console.log(err))
 
@@ -94,17 +108,32 @@ function App() {
     .then(data => {
 
       const deletedQ = questions.filter((q) => q.id !== id)
-
+      toast.success('Delete Successful')
       setQuestions(deletedQ)
 
       
     })
+    .catch(err => toast.error('ERROR'))
 
     
 }
 
   return (
     <div id="App">
+      <Toaster toastOptions={{
+        success: {
+          style: {
+            background: 'green',
+            color: 'white'
+          }
+        },
+        error: {
+          style: {
+            background: 'red',
+            color: 'white'
+          }
+        }
+      }}/>
 
       <SideMenu />
 

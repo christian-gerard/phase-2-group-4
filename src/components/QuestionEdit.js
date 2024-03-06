@@ -1,8 +1,9 @@
 import { useState } from 'react'
 
-function QuestionEdit({question,difficulty,category,a,b,c,d,answer,handleQuestionPatch}) {
+function QuestionEdit({id,question,difficulty,category,a,b,c,d,answer,handleQuestionPatch,handleEditMode}) {
 
     const newQuestionInitial = {
+        id: id,
         question: question,
         difficulty: difficulty,
         category: category,
@@ -35,6 +36,8 @@ function QuestionEdit({question,difficulty,category,a,b,c,d,answer,handleQuestio
         onSubmit={(e) => handleQuestionPatch(e,newQuestion)}
         >
 
+        <h1>Edit Question</h1>
+        
         <label>Question</label>
         <input name ='question' value={newQuestion.question}></input>
 
@@ -47,23 +50,23 @@ function QuestionEdit({question,difficulty,category,a,b,c,d,answer,handleQuestio
 
         <label>Category</label>
         <select name ='category' value={newQuestion.category}>
-            <option>General Knowledge</option>
-            <option>Sports</option>
-            <option>Geography</option>
+            <option value='General Knowledge'>General Knowledge</option>
+            <option value='Sports'>Sports</option>
+            <option value='Geography'>Geography</option>
         </select>
 
         <label>Answers</label>
         <label>A</label>
-        <input name='a' type='text' value={a}></input>
+        <input name='a'  value={newQuestion.a}></input>
         <label>B</label>
-        <input name='b' type='text' value={b}></input>
+        <input name='b'  value={newQuestion.b}></input>
         <label>C</label>
-        <input name='c' type='text' value={c}></input>
+        <input name='c'  value={newQuestion.c}></input>
         <label>D</label>
-        <input name='d' type='text' value={d}></input>
+        <input name='d' value={newQuestion.d}></input>
 
         <label>Correct Answer</label>
-        <select name='answer'>
+        <select name='answer' value={newQuestion.answer}>
             <option>a</option>
             <option>b</option>
             <option>c</option>

@@ -3,24 +3,13 @@
     {
       "id": "1",
       "category": "General Knowledge",
-      "difficulty": "medium",
+      "difficulty": "Hard",
       "question": "The architect known as Le Corbusier was an important figure in what style of architecture?",
       "a": "Modernism",
       "b": "Neoclassical",
       "c": "Baroque",
       "d": "Gothic Revival",
       "answer": "a"
-    },
-    {
-      "id": "2",
-      "category": "General Knowledge",
-      "difficulty": "easy",
-      "question": "Whqt year was the PlayStation 3 released?",
-      "a": "2002",
-      "b": "1999",
-      "c": "2006",
-      "d": "2005",
-      "answer": "c"
     },
     {
       "id": "3",
@@ -43,17 +32,6 @@
       "c": "Guitar Hero Live",
       "d": "Dance Dance Revolution",
       "answer": "b"
-    },
-    {
-      "id": "5",
-      "category": "General Knowledge",
-      "difficulty": "medium",
-      "question": "Which best selling toy of 1983 caused hysteria, resulting in riots breaking out in stores?",
-      "a": "Cabbage Patch Kids",
-      "b": "Care Bears",
-      "c": "Transformers",
-      "d": "Rubiks Cube",
-      "answer": "a"
     },
     {
       "id": "6",
@@ -276,94 +254,6 @@
       "answer": "b"
     },
     {
-      "id": "bc26",
-      "category": "geography",
-      "difficulty": "easy",
-      "question": "Capital of the United States",
-      "a": "Washington DC",
-      "b": "Boston",
-      "c": "New York",
-      "d": "Los Angeles",
-      "answer": "a"
-    },
-    {
-      "id": "4787",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "47877",
-      "category": "history",
-      "difficulty": "hard",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "478774",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "473",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "475",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "4789",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "477",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
       "id": "162e",
       "category": "devops",
       "difficulty": "medium",
@@ -372,6 +262,204 @@
       "b": "b",
       "c": "cd",
       "d": "d",
+      "answer": "a"
+    },
+    {
+      "id": "3967",
+      "category": "geography",
+      "difficulty": "easy",
+      "question": "TEST",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "b"
+    },
+    {
+      "id": "9f06",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "3f45",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "4560",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "6359",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "dce0",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "a6a9",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "57dd",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "52eb",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "85c1",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "dff1",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "9e03",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "0b25",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "aadb",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "ad0d",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "19b0",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "6a0f",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
+      "answer": "a"
+    },
+    {
+      "id": "cfb4",
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "TEST #",
+      "a": "a",
+      "b": "a",
+      "c": "a",
+      "d": "a",
       "answer": "a"
     }
   ]

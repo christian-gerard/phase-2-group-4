@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import { useParams, useOutletContext } from 'react-router-dom'
+import { useState, useMemo } from 'react';
+import { useParams, useOutletContext, useNavigate } from 'react-router-dom'
 import QuestionEdit from './QuestionEdit'
 
 function QuestionCard() {
     const params = useParams();
-    const { questions, handleQuestionPatch } = useOutletContext();
+    const { questions, handleQuestionPatch, handleDelete } = useOutletContext();
+    const nav = useNavigate()
     const [inEditMode, setInEditMode] = useState(false);
 
     const handleEditMode = () => {
@@ -12,22 +13,36 @@ function QuestionCard() {
     }
 
 
-    const question = questions.filter((question) => question.id === params.id)[0]
+    const question = useMemo(() => {
+        const q = questions.filter((question) => question.id === params.id)[0]
+        
+        if(!q) {
+
+        }
+      return q
+
+    },[questions])  
+    
 
 
 
     return(
         <>
-        <button onClick={handleEditMode}> Edit Question </button>
 
-        <button>❌</button>
+        <div className='edit-delete-buttons'>
+
+            <button onClick={handleEditMode}> {inEditMode ? 'End Edit' : 'Edit'} </button>
+
+            <button onClick={() => handleDelete(question.id)}>❌</button>
+
+        </div>
 
         { 
         
         inEditMode ?    
         
 
-        <QuestionEdit {...question} handleQuestionPatch={handleQuestionPatch} />
+        <QuestionEdit {...question} handleQuestionPatch={handleQuestionPatch} handleEditMode={handleEditMode} />
             
         :
    

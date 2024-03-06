@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import SideMenu from './SideMenu'
 import '../App.css';
 
 function App() {
+
+  const nav = useNavigate()
   const [questions, setQuestions] = useState([])
 
   useEffect(() => {
@@ -50,7 +52,7 @@ function App() {
       alert('Fill out all fields')
     } else {
 
-      fetch('http://localhost:8000/questions', {
+      fetch(`http://localhost:8000/questions/${newQuestion.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
@@ -61,15 +63,33 @@ function App() {
       .then(resp => resp.json())
       .then(data => {
 
-          setQuestions({...questions, data})
+          // setQuestions({...questions, data})
 
         
       })
       .catch(err => console.log(err))
 
     }
-
   }
+
+  const handleDelete = (id) => {
+    console.log(questions)
+    fetch(`http://localhost:8000/questions/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(resp => resp.json())
+    .then(data => {
+
+      setQuestions((questions) => questions.filter((q) => q.id !== id))
+      console.log(questions)
+      
+    })
+
+    
+}
 
   return (
     <div id="App">
@@ -78,7 +98,7 @@ function App() {
 
       <span id='app-title'>TRIVIAL</span>
       
-      <Outlet context={{questions, handleFormSubmit, handleQuestionPatch}}/>
+      <Outlet context={{questions, handleFormSubmit, handleQuestionPatch, handleDelete}}/>
 
       </div>
     </div>

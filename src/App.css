@@ -221,4 +221,19 @@
 .edit-question {
   display:flex;
   flex-direction: column;
+  background: pink;
+}
+
+.edit-delete-buttons {
+  width: 300px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.edit-delete-buttons * {
+  background:pink;
+  border: none;
+  height: 25px;
+
+  border-radius: 10px;
 }

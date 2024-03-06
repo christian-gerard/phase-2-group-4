@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet} from 'react-router-dom'
 import SideMenu from './SideMenu'
 import '../App.css';
 
 function App() {
-
-  const nav = useNavigate()
   const [questions, setQuestions] = useState([])
+
 
   useEffect(() => {
     fetch('http://localhost:8000/questions')
@@ -106,12 +105,14 @@ function App() {
 
   return (
     <div id="App">
+
       <SideMenu />
+
       <div id='main-container'>
 
-      <span id='app-title'>TRIVIAL</span>
-      
-      <Outlet context={{questions, handleFormSubmit, handleQuestionPatch, handleDelete}}/>
+        <span id='app-title'>TRIVIAL</span>
+        
+        <Outlet context={{questions, handleFormSubmit, handleQuestionPatch, handleDelete}}/>
 
       </div>
     </div>

@@ -32,11 +32,12 @@ function AddQuestion() {
 
         <select name="category" value={formData.category}>
           <option value="">Select One</option>
-          <option value="geography">Geography</option>
-          <option value="history">History</option>
-          <option value="science">Science</option>
-          <option value="movies">Movies</option>
-          <option value="devops">Devops</option>
+          <option value="General Knowledge">General Knowledge</option>
+          <option value="Geography">Geography</option>
+          <option value="History">History</option>
+          <option value="Sports">Sports</option>
+          <option value="Movies">Movies</option>
+          
         </select>
 
         <label htmlFor="type">Difficulty</label>

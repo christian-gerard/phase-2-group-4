@@ -1,0 +1,20 @@
+	{gameQuestions.map((question) => (
+								<div>
+		    					<p>{question.question}</p>
+							  	<p>A: {question.A}</p>
+							  	<p>B: {question.B}</p>
+							  	<p>C: {question.C}</p>
+							  	<p>D: {question.D}</p>
+									<input type="text" name="answer" onSubmit={handleAnswerSubmit} />
+								</div>
+								))}
+								
+								<form onChange={handleGameDifficultyChange}>
+									<label htmlFor="type">Choose Difficulty</label>
+							<select name="difficulty">
+										<option value="">Select One</option>
+										<option value="easy">Easy</option>
+										<option value="medium">Medium</option>
+										<option value="hard">Hard</option>
+							</select>
+						</form>

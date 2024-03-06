@@ -8,11 +8,11 @@ function Question() {
     const { questions } = useOutletContext()
 
     const renderQuestions = questions.map((question) => <QuestionPreview key={question.id} {...question} />)
-
+		
     return(
         <div className='questions'>
 
-            <h1>Questions</h1>
+				<h1>Questions</h1>
 
             <div id='view-questions'>
                 {renderQuestions ? renderQuestions : <h1>LOADING</h1>}

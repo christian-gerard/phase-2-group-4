@@ -33,7 +33,7 @@ function QuestionCard() {
 
         <div className='edit-delete-buttons'>
 
-            <button onClick={handleEditMode}> {inEditMode ? 'End Edit' : 'Edit'} </button>
+            <button onClick={handleEditMode}> {inEditMode ? 'Exit' : 'Edit'} </button>
 
         </div>
 
@@ -51,8 +51,8 @@ function QuestionCard() {
             <h3>{question.question}</h3>
 
             <div className='question-details'>
-                <span>Difficulty: {question.difficulty}</span>
-                <span>Category: {question.category}</span>
+                <span><b>DIFFICULTY</b>: {question.difficulty}</span>
+                <span><b>CATEGORY</b>: {question.category}</span>
             </div>
             
             <div className='question-answers'>
@@ -63,7 +63,7 @@ function QuestionCard() {
                     <li>{question.d}</li>
                 </ol>
 
-                <h5> Answer: {question.answer}</h5>
+                <span> <b>ANSWER</b>: {question.answer.toUpperCase()}</span>
 
             </div>
             

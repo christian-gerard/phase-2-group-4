@@ -40,7 +40,7 @@ function QuestionPreview({id,category,difficulty,question,a,b,c,d,answer}) {
 
         
             
-            <h5>{question}</h5>
+            <p>{question}</p>
 
             <div className='question-preview-details'>
 

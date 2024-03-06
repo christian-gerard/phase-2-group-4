@@ -6,9 +6,14 @@
 
 
 /* ID */
+html,body, #root{
+  height:100%;
+  margin:0;
+}
+
 #App {
-  width: 100vw;
-  height: 100vw;
+  width: 100%;
+  height: 100%;
 
   display:flex;
   flex-direction: row;
@@ -25,7 +30,7 @@
 #side-menu {
   background: lightblue;
   border: solid 1px black;
-  height: 100%;
+
 
   left: 0;
   top:0;
@@ -97,12 +102,17 @@
   flex-wrap: wrap;
   width:100%;
 
+
   margin:20px;
 }
 
 #page-selector {
   display:flex;
   justify-content: center;
+
+  margin-top: 20px;
+
+
 }
 
 #page-selector * {
@@ -167,7 +177,6 @@
 
 
 
-
   /* Questions Page */
   
   .questions {
@@ -178,10 +187,6 @@
   }
 
 
-
-
-
-  
   /* Question Preview */
   
   .question-preview {
@@ -190,22 +195,33 @@
     border-radius: 10px;
     padding: 15px;
   
-    width:300px; 
-    height: 150px; 
-    margin: 20px;
+    width:200px; 
+    height: 100px; 
+    margin: 5px;
   
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     align-items:first baseline;
   }
+
+  .question-preview * {
+
+    font-size: 10px;
+  }
+
+  .question-preview p {
+    font-style:bold;
+    font-size: 11px;
+  }
   
   .question-preview button {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background: pink;
     border: none;
     border-radius: 10px;
+    font-size: 8px;
   
   }
   
@@ -225,8 +241,6 @@
   }
 
 
-
-
   /* Question Card */
 
   .answers {
@@ -238,13 +252,14 @@
   }
   
   .question-card {
-    border: solid 1px pink;
-    margin: 10px;
-    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    margin:20px;
     padding: 20px;
+    background: lightblue;
+    width: 600px;
   
-    height: 250px;
-    width:300px;
+    border-radius:10px;
   }
   
   .question-details {
@@ -277,9 +292,15 @@
   }
   
   .edit-delete-buttons {
-    width: 300px;
-    display:flex;
-    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    justify-content: first baseline;
+  }
+
+  .edit-delete-buttons * {
+    margin-left: 55px;
+    height: 100px;
+    width: 650px;
   }
   
   .edit-delete-buttons * {

@@ -3,7 +3,7 @@
     {
       "id": "1",
       "category": "General Knowledge",
-      "difficulty": "Easy",
+      "difficulty": "medium",
       "question": "The architect known as Le Corbusier was an important figure in what style of architecture?",
       "a": "Modernism",
       "b": "Neoclassical",
@@ -14,7 +14,7 @@
     {
       "id": "2",
       "category": "General Knowledge",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "question": "What year was the PlayStation 3 released?",
       "a": "2002",
       "b": "1999",
@@ -157,7 +157,7 @@
     {
       "id": "15",
       "category": "History",
-      "difficulty": "medium",
+      "difficulty": "Hard",
       "question": "Which USA president encouraged the space race and putting a man on the moon?",
       "a": "Richard Nixon",
       "b": "John F. Kennedy",

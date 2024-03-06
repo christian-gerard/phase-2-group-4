@@ -42,9 +42,9 @@ function QuestionEdit({id,question,difficulty,category,a,b,c,d,answer,handleQues
 
         <label>Difficulty</label>
             <select name ='difficulty' value={newQuestion.difficulty}>
-                <option>Easy</option>
-                <option>Medium</option>
-                <option>Hard</option>
+                <option>easy</option>
+                <option>medium</option>
+                <option>hard</option>
             </select>
 
         <label>Category</label>

@@ -35,7 +35,7 @@ function App() {
       .then(resp => resp.json())
       .then(data => {
 
-          setQuestions({...questions, data})
+          setQuestions([...questions, data])
 
         
       })

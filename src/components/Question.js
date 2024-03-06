@@ -53,13 +53,14 @@ function Question() {
 
         
             if(filter) {
+                
+                const filtered = triviaQuestions.filter((q) => q.category === filter).slice(page.start,page.stop).map((q) => <QuestionPreview key={q.id} {...q} />)
 
-                return triviaQuestions.filter((q) => q.category === filter).slice(page.start,page.stop).map((q) => <QuestionPreview key={q.id} {...q} />)
-
+                return filtered.length === 0 ? <h1>No Questions in {filter.toLowerCase()} 😕</h1> : filtered
             } else {
 
-                return triviaQuestions.slice(page.start,page.stop).map((q) => <QuestionPreview key={q.id} {...q} />)
-
+                const unfiltered = triviaQuestions.slice(page.start,page.stop).map((q) => <QuestionPreview key={q.id} {...q} />)
+                return unfiltered
             }
 
 

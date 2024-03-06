@@ -30,7 +30,7 @@ function QuestionEdit({id,question,difficulty,category,a,b,c,d,answer,handleQues
 
 
 
-        <div className='question-card'>
+        <div >
         <form 
         className='edit-question'
         onChange={handleQuestionChange}
@@ -40,7 +40,7 @@ function QuestionEdit({id,question,difficulty,category,a,b,c,d,answer,handleQues
         <h1>Edit Question</h1>
 
         <label>Question</label>
-        <input name ='question' value={newQuestion.question}></input>
+        <input name ='question' value={newQuestion.question} className='question-field'></input>
 
         <label>Difficulty</label>
         <select name ='difficulty' value={newQuestion.difficulty}>

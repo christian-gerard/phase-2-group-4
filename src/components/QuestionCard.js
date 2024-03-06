@@ -21,7 +21,7 @@ function QuestionCard() {
         }
       return q
 
-    },[])  
+    },[questions])  
     
 
 

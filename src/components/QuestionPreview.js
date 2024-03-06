@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
+
 function QuestionPreview({id,category,difficulty,question,a,b,c,d,answer}) {
 
     const handleDiffEmoji = () => {

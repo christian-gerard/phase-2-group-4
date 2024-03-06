@@ -184,13 +184,22 @@
   border-radius: 10px;
   padding: 10px;
 
-  width:200px;
+  width:300px;
   height: 150px;
   margin: 20px;
 
   display:flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.question-preview button {
+  width: 40px;
+  height: 40px;
+  background: pink;
+  border: none;
+  border-radius: 10px;
+
 }
 
 .question-preview-nav {
@@ -208,7 +217,48 @@
   flex-direction: column;
 }
 
-.questions h1 {
+.questions {
+
+  width:100%;
+}
+
+.questions h1,select,button {
   margin-left:40px;
+
+}
+
+.edit-question {
+  display:flex;
+  flex-direction: column;
+  margin:20px;
+  padding: 20px;
+  background: pink;
+  width: 600px;
+
+  border-radius:10px;
+}
+
+.edit-question * {
+  margin: 5px;
+}
+
+.edit-delete-buttons {
+  width: 300px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.edit-delete-buttons * {
+  background:pink;
+  border: none;
+  height: 25px;
+
+
+  border-radius: 10px;
+}
+
+.question-field {
+  height: 40px;
+  display:flex;
 
 }

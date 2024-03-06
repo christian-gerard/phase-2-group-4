@@ -3,6 +3,7 @@ import { useOutletContext } from 'react-router-dom';
 import QuestionCard from './QuestionCard'
 import CountdownTimer from './Timer';
 import QuestionPreview from './QuestionPreview';
+import { render } from '@testing-library/react';
 
 function Question() {
     const { questions } = useOutletContext()
@@ -20,11 +21,20 @@ function Question() {
 
     const handleNext = () => {
 
-        if(page.stop <= questions.length) {
+        if(filter && page.stop <= renderPreviews.length ) {
 
             setPage({...page, start: page.start + 9, stop: page.stop + 9})
 
+        } else if (!filter && page.stop <= questions.length) {
+
+            setPage({...page, start: page.start + 9, stop: page.stop + 9})
         }
+
+
+
+            
+
+
 
     }
 

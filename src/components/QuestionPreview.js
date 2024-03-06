@@ -15,10 +15,18 @@ function QuestionPreview({id,category,difficulty,question,a,b,c,d,answer}) {
 
     const handleCategoryEmoji = () => {
 
-        if(category === 'geography') {
+        if(category === 'Geography') {
             return '🗺'
-        } else if (category === 'history') {
+        } else if (category === 'History') {
             return '📜'
+        } else if (category === 'General Knowledge') {
+            return '🧠'
+        } else if (category === 'Sports') {
+            return '⚽️'
+        } else if (category === 'Movies') {
+            return '🎬'
+        } else if (category === 'devops') {
+            return '🧑🏻‍💻'
         }
     }
     return(
@@ -29,8 +37,8 @@ function QuestionPreview({id,category,difficulty,question,a,b,c,d,answer}) {
 
             <div className='question-preview-details'>
 
-                <span>{handleDiffEmoji()}  {difficulty}</span>
                 <span>{handleCategoryEmoji()}   {category}</span>
+                <span>{handleDiffEmoji()}  {difficulty}</span>
 
             </div>
         </div>

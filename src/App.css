@@ -208,7 +208,17 @@
   flex-direction: column;
 }
 
-.questions h1 {
+.questions {
+
+  width:100%;
+}
+
+.questions h1,select,button {
   margin-left:40px;
 
+}
+
+.edit-question {
+  display:flex;
+  flex-direction: column;
 }

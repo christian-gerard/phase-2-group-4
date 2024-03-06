@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { useParams, useOutletContext } from 'react-router-dom'
+import QuestionEdit from './QuestionEdit'
 
 function QuestionCard() {
-
     const params = useParams();
-    const { questions } = useOutletContext();
+    const { questions, handleQuestionPatch } = useOutletContext();
+    const [inEditMode, setInEditMode] = useState(false);
+
+    const handleEditMode = () => {
+        setInEditMode(!inEditMode)
+    }
 
 
     const question = questions.filter((question) => question.id === params.id)[0]
@@ -12,6 +17,20 @@ function QuestionCard() {
 
 
     return(
+        <>
+        <button onClick={handleEditMode}> Edit Question </button>
+
+        <button>❌</button>
+
+        { 
+        
+        inEditMode ?    
+        
+
+        <QuestionEdit {...question} handleQuestionPatch={handleQuestionPatch} />
+            
+        :
+   
         <div className='question-card'>
             <h3>{question.question}</h3>
 
@@ -21,8 +40,6 @@ function QuestionCard() {
 
             </div>
             
-
-
             <div className='question-answers'>
                 <ol type='A'>
                     <li>{question.a}</li>
@@ -36,6 +53,14 @@ function QuestionCard() {
             </div>
             
         </div>
+
+
+   }
+        </>
+
+
+            
+           
     )
 }
 

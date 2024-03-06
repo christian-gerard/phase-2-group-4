@@ -42,6 +42,35 @@ function App() {
     }
   };
 
+  const handleQuestionPatch = (e,newQuestion) => {
+    e.preventDefault();
+
+
+    if(Object.values(newQuestion).includes('')) {
+      alert('Fill out all fields')
+    } else {
+
+      fetch('http://localhost:8000/questions', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newQuestion)
+  
+      })
+      .then(resp => resp.json())
+      .then(data => {
+
+          setQuestions({...questions, data})
+
+        
+      })
+      .catch(err => console.log(err))
+
+    }
+
+  }
+
   return (
     <div id="App">
       <SideMenu />
@@ -49,7 +78,7 @@ function App() {
 
       <span id='app-title'>TRIVIAL</span>
       
-      <Outlet context={{questions, handleFormSubmit}}/>
+      <Outlet context={{questions, handleFormSubmit, handleQuestionPatch}}/>
 
       </div>
     </div>

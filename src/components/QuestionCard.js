@@ -17,11 +17,11 @@ function QuestionCard() {
         const q = questions.filter((question) => question.id === params.id)[0]
         
         if(!q) {
-
+            nav(-1)
         }
       return q
 
-    },[questions])  
+    },[])  
     
 
 
@@ -33,7 +33,7 @@ function QuestionCard() {
 
             <button onClick={handleEditMode}> {inEditMode ? 'End Edit' : 'Edit'} </button>
 
-            <button onClick={() => handleDelete(question.id)}>❌</button>
+
 
         </div>
 

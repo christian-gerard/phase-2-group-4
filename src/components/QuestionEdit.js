@@ -22,6 +22,7 @@ function QuestionEdit({id,question,difficulty,category,a,b,c,d,answer,handleQues
     
     
     }
+
         
 
 
@@ -33,11 +34,11 @@ function QuestionEdit({id,question,difficulty,category,a,b,c,d,answer,handleQues
         <form 
         className='edit-question'
         onChange={handleQuestionChange}
-        onSubmit={(e) => handleQuestionPatch(e,newQuestion)}
+        onSubmit={(e) => handleQuestionPatch(e,newQuestion,handleEditMode)}
         >
 
         <h1>Edit Question</h1>
-        
+
         <label>Question</label>
         <input name ='question' value={newQuestion.question}></input>
 

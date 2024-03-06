@@ -44,7 +44,7 @@ function App() {
     }
   };
 
-  const handleQuestionPatch = (e,newQuestion) => {
+  const handleQuestionPatch = (e,newQuestion,handleEditMode) => {
     e.preventDefault();
 
 
@@ -63,9 +63,20 @@ function App() {
       .then(resp => resp.json())
       .then(data => {
 
-          // setQuestions({...questions, data})
+        const newQ = questions.map((q) => {
 
-        
+          if(q.id === newQuestion.id) {
+            return data
+          } else {
+            return q
+          }
+          
+        })
+
+        setQuestions(newQ)
+
+        handleEditMode()
+
       })
       .catch(err => console.log(err))
 
@@ -83,8 +94,10 @@ function App() {
     .then(resp => resp.json())
     .then(data => {
 
-      setQuestions((questions) => questions.filter((q) => q.id !== id))
-      console.log(questions)
+      const deletedQ = questions.filter((q) => q.id !== id)
+
+      setQuestions(deletedQ)
+
       
     })
 

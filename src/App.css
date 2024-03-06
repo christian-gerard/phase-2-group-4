@@ -193,6 +193,14 @@
   justify-content: space-between;
 }
 
+.question-preview button {
+  width: 40px;
+  height: 40px;
+  background: pink;
+  border: none;
+  border-radius: 10px;
+}
+
 .question-preview-nav {
   text-decoration: none;
   color: black;

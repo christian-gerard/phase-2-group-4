@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "id": "1",
+      "id": "1"
       "category": "General Knowledge",
       "difficulty": "medium",
       "question": "The architect known as Le Corbusier was an important figure in what style of architecture?",
@@ -285,6 +285,7 @@
       "c": "Programming Language",
       "d": "IDE",
       "answer": "a"
+
     }
   ]
 }

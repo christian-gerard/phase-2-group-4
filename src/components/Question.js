@@ -69,13 +69,14 @@ function Question() {
             debugger;
     },[page,filter,questions])
 
-
+    const renderQuestions = questions.map((question) => <QuestionPreview key={question.id} {...question} />)
+		
 
     return(
 
         <div className='questions'>
 
-            <h1>Questions</h1>
+				<h1>Questions</h1>
 
             <select onChange={handleFilter}>
                 <option value=''>All</option>

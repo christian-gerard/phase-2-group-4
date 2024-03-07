@@ -1,38 +1,57 @@
-import { useState } from 'react'
-
+import { useState } from "react";
+import Timer from "./Timer";
+import { useOutletContext } from "react-router-dom";
+import GamePlay from "./GamePlay";
 
 function Start() {
-    const [inGame, setInGame] = useState(false);
+  const { questions } = useOutletContext();
+  const [inGame, setInGame] = useState(false);
+  const [gameQuestions, setGameQuestions] = useState([]);
+  const [gameDifficulty, setGameDifficulty] = useState("easy");
 
-    const handleStart = () => {
+  const handleGameDifficultyChange = (e) => {
+    setGameDifficulty(e.target.value);
+  };
 
-        setInGame(!inGame)
-    }
+  const handleStart = () => {
+    setInGame(!inGame);
+    setGameQuestions(
+      questions.filter((question) => question.difficulty === gameDifficulty)
+    );
+  };
 
-    return (
-        <>
-        {inGame ? 
-        <> 
-        <h1>In Game</h1>
+  return (
+    <section>
+      {inGame ? (
+        <div>
+          <h2>
+            <Timer />
+          </h2>
+          <GamePlay gameQuestions={gameQuestions} />
+          <br></br>
+          <button onClick={handleStart}>Restart Game</button>
+        </div>
+      ) : (
+        <div>
+          <h1>Welcome to Trivial </h1>
+          <p>
+            Trivial will ask you trivia questions. You will have to answer under
+            a certain time limit.
+          </p>
 
-
-        <button onClick={handleStart}>End Game</button>
-        
-        </>
-        
-        : 
-        <> 
-        <h1>Welcome to Trivial </h1> 
-        <p>Trivial will ask you trivia questions. You will have to answer under a certain time limit.</p>
-
-        <button onClick={handleStart}> Start Trivia! </button>
-        </>
-        
-        
-        }
-        </>
-        
-    )
+          <form onChange={handleGameDifficultyChange}>
+            <label htmlFor="difficulty">Choose Difficulty</label>
+            <select name="difficulty">
+              <option value="">Select One</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </form>
+          <button onClick={handleStart}> Start Trivia! </button>
+        </div>
+      )}
+    </section>
+  );
 }
-
-export default Start
+export default Start;

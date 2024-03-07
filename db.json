@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "id": 1,
+      "id": "1"
       "category": "General Knowledge",
       "difficulty": "medium",
       "question": "The architect known as Le Corbusier was an important figure in what style of architecture?",
@@ -12,10 +12,10 @@
       "answer": "a"
     },
     {
-      "id": 2,
+      "id": "2",
       "category": "General Knowledge",
       "difficulty": "easy",
-      "question": "Whqt year was the PlayStation 3 released?",
+      "question": "What year was the PlayStation 3 released?",
       "a": "2002",
       "b": "1999",
       "c": "2006",
@@ -23,7 +23,7 @@
       "answer": "c"
     },
     {
-      "id": 3,
+      "id": "3",
       "category": "General Knowledge",
       "difficulty": "medium",
       "question": "Which of the following is the IATA code for Manchester Airport",
@@ -34,7 +34,7 @@
       "answer": "b"
     },
     {
-      "id": 4,
+      "id": "4",
       "category": "General Knowledge",
       "difficulty": "easy",
       "question": "Which one of the following rhythm games was made by Harmonix?",
@@ -45,7 +45,7 @@
       "answer": "b"
     },
     {
-      "id": 5,
+      "id": "5",
       "category": "General Knowledge",
       "difficulty": "medium",
       "question": "Which best selling toy of 1983 caused hysteria, resulting in riots breaking out in stores?",
@@ -56,7 +56,7 @@
       "answer": "a"
     },
     {
-      "id": 6,
+      "id": "6",
       "category": "Sports",
       "difficulty": "easy",
       "question": "Who is the only player in the NBA to score 100 points in a single game?",
@@ -67,7 +67,7 @@
       "answer": "d"
     },
     {
-      "id": 7,
+      "id": "7",
       "category": "Sports",
       "difficulty": "medium",
       "question": "What number jersey is Drew Brees of the Saints?",
@@ -78,7 +78,7 @@
       "answer": "c"
     },
     {
-      "id": 8,
+      "id": "8",
       "category": "Sports",
       "difficulty": "hard",
       "question": "Where is Tony Parker, the point guard for the San Antonio Spurs, from?",
@@ -89,7 +89,7 @@
       "answer": "b"
     },
     {
-      "id": 9,
+      "id": "9",
       "category": "Sports",
       "difficulty": "medium",
       "question": "How many stitches are in a baseball?",
@@ -100,7 +100,7 @@
       "answer": "d"
     },
     {
-      "id": 10,
+      "id": "10",
       "category": "Sports",
       "difficulty": "medium",
       "question": "Who is the all-time leading goal soccer in the history of the FIFA World Cup?",
@@ -111,7 +111,7 @@
       "answer": "b"
     },
     {
-      "id": 11,
+      "id": "11",
       "category": "History",
       "difficulty": "easy",
       "question": "When did the Industrial Revolution first start?",
@@ -122,7 +122,7 @@
       "answer": "c"
     },
     {
-      "id": 12,
+      "id": "12",
       "category": "History",
       "difficulty": "medium",
       "question": "What battle was the first major battle of the Italian Front of World War I?",
@@ -133,7 +133,7 @@
       "answer": "c"
     },
     {
-      "id": 13,
+      "id": "13",
       "category": "History",
       "difficulty": "hard",
       "question": "Which famous American gangster rose to prominence during the Great Depression?",
@@ -144,7 +144,7 @@
       "answer": "b"
     },
     {
-      "id": 14,
+      "id": "14",
       "category": "History",
       "difficulty": "hard",
       "question": "After the American Revolution, which group of people moved to Canada?",
@@ -155,9 +155,9 @@
       "answer": "b"
     },
     {
-      "id": 15,
+      "id": "15",
       "category": "History",
-      "difficulty": "medium",
+      "difficulty": "Hard",
       "question": "Which USA president encouraged the space race and putting a man on the moon?",
       "a": "Richard Nixon",
       "b": "John F. Kennedy",
@@ -166,7 +166,7 @@
       "answer": "b"
     },
     {
-      "id": 16,
+      "id": "16",
       "category": "Geography",
       "difficulty": "medium",
       "question": "What is the capital of Canada?",
@@ -177,7 +177,7 @@
       "answer": "a"
     },
     {
-      "id": 17,
+      "id": "17",
       "category": "Geography",
       "difficulty": "hard",
       "question": "Where are the Spanish Steps located?",
@@ -188,7 +188,7 @@
       "answer": "c"
     },
     {
-      "id": 18,
+      "id": "18",
       "category": "Geography",
       "difficulty": "hard",
       "question": "Which of these cities is NOT a national capital?",
@@ -199,7 +199,7 @@
       "answer": "d"
     },
     {
-      "id": 19,
+      "id": "19",
       "category": "Geography",
       "difficulty": "medium",
       "question": "Which of these countries was NOT a part of the Soviet Union?",
@@ -210,7 +210,7 @@
       "answer": "c"
     },
     {
-      "id": 20,
+      "id": "20",
       "category": "Geography",
       "difficulty": "hard",
       "question": "Which of these countries does NOT have only one border?",
@@ -221,7 +221,7 @@
       "answer": "c"
     },
     {
-      "id": 21,
+      "id": "21",
       "category": "Movies",
       "difficulty": "medium",
       "question": "The code in The Matrix comes from what food recipes?",
@@ -232,7 +232,7 @@
       "answer": "a"
     },
     {
-      "id": 22,
+      "id": "22",
       "category": "Movies",
       "difficulty": "medium",
       "question": "Which country does Forrest Gump travel to as part of the All-American Ping-Pong Team?",
@@ -243,7 +243,7 @@
       "answer": "b"
     },
     {
-      "id": 23,
+      "id": "23",
       "category": "Movies",
       "difficulty": "hard",
       "question": "What was the top-grossing movie of 2014?",
@@ -254,7 +254,7 @@
       "answer": "d"
     },
     {
-      "id": 24,
+      "id": "24",
       "category": "Movies",
       "difficulty": "hard",
       "question": "What item is in every Fight Club scene?",
@@ -265,7 +265,7 @@
       "answer": "b"
     },
     {
-      "id": 25,
+      "id": "25",
       "category": "Movies",
       "difficulty": "easy",
       "question": "Which actor hasn't played The Joker?",
@@ -276,114 +276,16 @@
       "answer": "b"
     },
     {
-      "id": "bc26",
-      "category": "geography",
-      "difficulty": "easy",
-      "question": "Capital of the United States",
-      "a": "Washington DC",
-      "b": "Boston",
-      "c": "New York",
-      "d": "Los Angeles",
-      "answer": "a"
-    },
-    {
-      "id": "4787",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "47877",
-      "category": "history",
+      "id": "29a5",
+      "category": "General Knowledge",
       "difficulty": "hard",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "478774",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "473",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "475",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "4789",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "477",
-      "category": "history",
-      "difficulty": "medium",
-      "question": "Who was the Second President of the United States?",
-      "a": "John Adams",
-      "b": "Thomas Jefferson",
-      "c": "Mitch McConnel",
-      "d": "Nancy Pelosi",
-      "answer": "b"
-    },
-    {
-      "id": "68eb",
-      "category": "science",
-      "difficulty": "medium",
-      "question": "What type of worm is immortal?",
-      "a": "Ring",
-      "b": "Flat",
-      "c": "Segmented",
-      "d": "Nemotode",
-      "answer": "b"
-    },
-    {
-      "id": "ff06",
-      "category": "geography",
-      "difficulty": "easy",
-      "question": "sss",
-      "a": "Ring",
-      "b": "Flat",
-      "c": "Segmented",
-      "d": "Nemotode",
-      "answer": "b"
+      "question": "What is git?",
+      "a": "Version Control",
+      "b": "Data Type",
+      "c": "Programming Language",
+      "d": "IDE",
+      "answer": "a"
+
     }
   ]
 }

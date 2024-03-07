@@ -6,9 +6,14 @@
 
 
 /* ID */
+html,body, #root{
+  height:100%;
+  margin:0;
+}
+
 #App {
-  width: 100vw;
-  height: 100vw;
+  width: 100%;
+  height: 100%;
 
   display:flex;
   flex-direction: row;
@@ -25,7 +30,7 @@
 #side-menu {
   background: lightblue;
   border: solid 1px black;
-  height: 100%;
+
 
   left: 0;
   top:0;
@@ -36,6 +41,7 @@
 
 
 }
+
 #side-menu-button {
 
   margin:40px;
@@ -48,6 +54,7 @@
   display:flex;
   flex-direction: column;
 }
+
 #side-menu-nav-buttons {
   display:flex;
   flex-direction:column;
@@ -59,6 +66,7 @@
 
 #main-container {
   width:100%;
+  height: 100%;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -94,121 +102,236 @@
   flex-wrap: wrap;
   width:100%;
 
+
   margin:20px;
+}
+
+#page-selector {
+  display:flex;
+  justify-content: center;
+
+  margin-top: 20px;
+
+
+}
+
+#page-selector * {
+
+  margin-right: 30px;
+  margin-left: 30px;
+  width: 200px;
+  height: 25px;
+  background: pink;
+  border: none;
+  border-radius: 10px;
 }
 
 /* Classes */
 
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
-}
+  /* Side Menu Button Animation */
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
 
-/* Rotate first bar */
-.change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
-}
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
 
-/* Fade out the second bar */
-.change .bar2 {opacity: 0;}
+  .change .bar2 {opacity: 0;}
 
-/* Rotate last bar */
-.change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
-}
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
 
-.opened {
-  width: 50%;
-}
+  .opened {
+    width: 50%;
+  }
 
-.collapsed {
-  width: 120px;
-}
+  .collapsed {
+    width: 120px;
+  }
 
-.side-menu-nav {
 
-  color: black;
-  text-decoration: none;
-  padding: 10px;
-  margin:10px;
-  font-size:1.5em;
-}
 
-.side-menu-nav span:hover {
 
-  color: pink;
-  text-decoration: underline;
+  /* Side Menu */
+  .side-menu-nav {
+
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin:10px;
+    font-size:1.5em;
+  }
+
+  .side-menu-nav span:hover {
+
+    color: pink;
+    text-decoration: underline;
+    
+  }
+
+
+
+  /* Questions Page */
   
-}
+  .questions {
+
+    width:100%;
+    height: 100px;
+    margin-left:40px;
+  }
 
 
-
-.answers {
-
-  display:flex;
-  flex-direction:column;
-
+  /* Question Preview */
   
-}
-
-.question-card {
-  border: solid 1px pink;
-  margin: 10px;
-  border-radius: 20px;
-  padding: 20px;
-
-  height: 250px;
-  width:300px;
-}
-
-.question-details {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-}
-
-.question-details * {
-  margin-left: 10px;
-}
-
-.hidden {
-  display: none;
-}
-
-.question-preview {
-
-  border: 1px solid pink;
-  border-radius: 10px;
-  padding: 10px;
-
-  width:200px;
-  height: 150px;
-  margin: 20px;
-
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.question-preview-nav {
-  text-decoration: none;
-  color: black;
+  .question-preview {
   
-}
+    border: 1px solid pink;
+    border-radius: 10px;
+    padding: 15px;
+  
+    width:200px; 
+    height: 100px; 
+    margin: 5px;
+  
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:first baseline;
+  }
 
-.question-preview-nav:hover {
-  color: pink;
-}
+  .question-preview * {
 
-.question-preview-details {
-  display:flex;
-  flex-direction: column;
-}
+    font-size: 10px;
+  }
 
-.questions h1 {
-  margin-left:40px;
+  .question-preview p {
+    font-style:bold;
+    font-size: 11px;
+  }
+  
+  .question-preview button {
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border: none;
+    border-radius: 10px;
+    font-size: 8px;
+  
+  }
+  
+  .question-preview-nav {
+    text-decoration: none;
+    color: black;
+    
+  }
+  
+  .question-preview-nav:hover {
+    color: pink;
+  }
+  
+  .question-preview-details {
+    display:flex;
+    flex-direction: column;
+  }
 
-}
+
+  /* Question Card */
+
+  .answers {
+
+    display:flex;
+    flex-direction:column;
+  
+    
+  }
+  
+  .question-card {
+    display:flex;
+    flex-direction: column;
+    margin:20px;
+    padding: 20px;
+    background: lightblue;
+    width: 600px;
+  
+    border-radius:10px;
+  }
+  
+  .question-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+  
+  .question-details * {
+    margin-left: 10px;
+  }
+
+
+
+  /* Edit Question */
+
+  .edit-question {
+    display:flex;
+    flex-direction: column;
+    margin:20px;
+    padding: 20px;
+    background: pink;
+    width: 600px;
+  
+    border-radius:10px;
+  }
+  
+  .edit-question * {
+    margin: 5px;
+  }
+  
+  .edit-delete-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .edit-delete-buttons * {
+
+    height: 100px;
+    width: 650px;
+  }
+  
+  .edit-delete-buttons * {
+    background:pink;
+    border: none;
+    height: 25px;
+  
+  
+    border-radius: 10px;
+  }
+  
+  .question-field {
+    height: 40px;
+    display:flex;
+  
+  }
+
+
+
+
+/* Notifications via Toaster */
+
+  .success-notification {
+    background: lightgreen;
+  }
+
+
+
+  .hidden {
+    display: none;
+  }
+
+
+

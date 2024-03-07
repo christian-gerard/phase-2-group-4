@@ -2,18 +2,18 @@
 function Settings() {
 
     return (
-        <div id='settings-container'>
+        <div id='settings'>
             <h1>TRIVIAL SETTINGS</h1>
 
-            <label>Difficulty</label> 
+            <label>Player Name</label>
+            <input type='text' placeholder='Place Name Here'></input>
+
+            <label>Color Scheme</label> 
             <select>
-                <option>Select Difficulty</option>
+                <option>Select Color</option>
             </select>
 
-            <label>Category</label>
-            <select>
-                <option>Select Category</option>
-            </select>
+        
         </div>
     )
 }

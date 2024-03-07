@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import Timer from './Timer'
+
 import { useState } from 'react-router-dom';
 import Start from './Start'
+
 
 
 const [gameAnswers, setGameAnswers] = useState([]);

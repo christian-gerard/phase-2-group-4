@@ -276,14 +276,14 @@
       "answer": "b"
     },
     {
-      "id": "acfc",
+      "id": "29a5",
       "category": "General Knowledge",
-      "difficulty": "easy",
-      "question": "What year was the PlayStation 3 released?",
-      "a": "a",
-      "b": "a",
-      "c": "a",
-      "d": "a",
+      "difficulty": "hard",
+      "question": "What is git?",
+      "a": "Version Control",
+      "b": "Data Type",
+      "c": "Programming Language",
+      "d": "IDE",
       "answer": "a"
     }
   ]

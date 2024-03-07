@@ -294,11 +294,11 @@ html,body, #root{
   .edit-delete-buttons {
     width: 100%;
     display: flex;
-    justify-content: first baseline;
+    justify-content: center;
   }
 
   .edit-delete-buttons * {
-    margin-left: 55px;
+
     height: 100px;
     width: 650px;
   }
@@ -323,9 +323,9 @@ html,body, #root{
 
 /* Notifications via Toaster */
 
-.success-notification {
-  background: lightgreen;
-}
+  .success-notification {
+    background: lightgreen;
+  }
 
 
 

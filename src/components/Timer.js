@@ -31,8 +31,7 @@ const CountdownTimer = () => {
 
  return (
    <div>
-     <h1>Countdown Timer</h1>
-     <p>{`${time.minutes.toString().padStart(2, '0')}:${time.seconds.toString().padStart(2, '0')}`}</p>
+     <h1>Time Remaining: {`${time.minutes.toString().padStart(2, '0')}:${time.seconds.toString().padStart(2, '0')}`}</h1>
    </div>
  );
 };

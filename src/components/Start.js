@@ -8,7 +8,6 @@ import GamePlay from './GamePlay';
 function Start() {
 	
 	const { questions } = useOutletContext();
-
 	const [inGame, setInGame] = useState(false);
 	const [gameQuestions, setGameQuestions] = useState([]);
 	const [gameDifficulty, setGameDifficulty] = useState('easy');
@@ -18,7 +17,6 @@ function Start() {
 	const handleStart = () => {
 		setInGame(!inGame)
 		setGameQuestions(questions.filter(question => question.difficulty === gameDifficulty))	
-		
 		}
 
 	
@@ -26,17 +24,13 @@ function Start() {
    <section>
       {inGame ? (
         <div>
-          <h1>In Game</h1>
-						<Timer />
+          <h2><Timer /></h2>
 					<GamePlay gameQuestions={gameQuestions} />
 					<br>
 					</br>
           <button onClick={handleStart}>Restart Game</button>
 			</div>
-			) : (
-					
-					
-					
+			) : (			
         <div>
           <h1>Welcome to Trivial </h1>
           <p>

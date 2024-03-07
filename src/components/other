@@ -23,3 +23,23 @@
 						const handleFirstQuestion = () => { gameQuestions.find(question => gameQuestions[0].id === question.id) 
 							
 							firstQuestion={handleFirstQuestion()}
+							
+							
+							return (   if (gameQuestionsCount === 0) { 
+										        <div>
+		          <h1>Game Over!</h1>
+		          <p>
+		            You got {numberCorrect} correct answers out of
+		            {numberOfGameQuestions} questions.
+		          </p>
+		        </div>
+		      
+		    } else {
+		        <div>
+		          <h1>Game Over!</h1>
+		          <p>
+		            You got {numberCorrect} correct answers out of
+		            {numberOfGameQuestions} questions.
+		          </p>
+		        </div>
+		      );

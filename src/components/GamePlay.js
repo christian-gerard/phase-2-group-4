@@ -1,37 +1,52 @@
 import { useState } from 'react'
 import Timer from './Timer'
-
-import { useState } from 'react-router-dom';
+import {useParams,  useOutletContext } from 'react-router-dom';
 import Start from './Start'
 
+function GamePlay(props) {
+	const params = useParams();
+	const gameQuestions = props.gameQuestions
+	const [currentQuestion, setCurrentQuestion] = useState(gameQuestions[0]);
+	const [numberCorrect, setNumberCorrect] = useState("")
+	
+	const handleSubmitAnswer = (e) => {
+		e.preventDefault()
+	
+		if (currentQuestion.answer === e.target.value) {
+			console.log(e.target.value)
+			console.log(numberCorrect)
+			setNumberCorrect(numberCorrect + 1)
+			setCurrentQuestion(gameQuestions.shift())
+		}
 
+		else { setCurrentQuestion(gameQuestions.shift()) }
+    }
+	
+	
 
-const [gameAnswers, setGameAnswers] = useState([]);
-const [numberCorrect, setNumberCorrect] = useState(0);
-const [currentAnswer, setCurrentAnswer] = useState([]);
+	return (
+		<div>
+		<h1>Number Correct:{numberCorrect}</h1>
+		
+      <form onSubmit={handleSubmitAnswer}>
+				<p>{currentQuestion.question}</p>
+				<ul>
+	        <button className="buttonA" name="A" value="a">
+	          <label htmlFor="A">A.</label>
+	          {currentQuestion.a}
+	        </button>
+	        <button className="buttonB" name="B" value="b">
+	          <label htmlFor="B">`B.{currentQuestion.b}`</label>
+	        </button>
+	        <button className="buttonC" name="C" value="c">
+	          <label htmlFor="C">`C.{currentQuestion.c}`</label>
+	        </button>
+	        <button className="buttonD" name="D" value="d">
+	          <label htmlFor="D">`D.{currentQuestion.d}`</label>
+	        </button></ul>
+      </form>
+   </div>
+			);
 
-const handleAnswerChange = (e) => {
-  setCurrentAnswer(...currentAnswer, e.target.value);
-};
-
-const handleAnswersSubmit = (e, answer) => {
-  e.preventDefault();
-
-  setGameAnswers([...gameAnswers, answer]);
-  if (answer.toLowerCase() === e.answer.toLowerCase()) {
-    setNumberCorrect(numberCorrect + 1);
-  }
-};
-
-<div>
-  {gameQuestions.map((question) => (
-    <form onSubmit={handleAnswersSubmit} onChange={handleAnswerChange}>
-      <p>{question.question}</p>
-      <p>A: {question.a}</p>
-      <p>B: {question.b}</p>
-      <p>C: {question.c}</p>
-      <p>D: {question.d}</p>
-      Answer:<input type="text" name="answer" value={currentAnswer}></input>
-    </form>
-  ))}
-</div>;
+}
+export default GamePlay

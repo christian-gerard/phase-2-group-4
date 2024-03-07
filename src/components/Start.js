@@ -1,35 +1,25 @@
 import { useState } from 'react'
 import Timer from './Timer'
 import { useOutletContext } from "react-router-dom";
+import GamePlay from './GamePlay';
+
 
 
 function Start() {
 	
 	const { questions } = useOutletContext();
+
 	const [inGame, setInGame] = useState(false);
 	const [gameQuestions, setGameQuestions] = useState([]);
 	const [gameDifficulty, setGameDifficulty] = useState('easy');
-	const [gameAnswers, setGameAnswers] = useState([]);
-	const [numberCorrect, setNumberCorrect] = useState(0);
-	const [currentAnswer, setCurrentAnswer] = useState([]);
 
 	const handleGameDifficultyChange = (e) => { setGameDifficulty(e.target.value) }
+	
 	const handleStart = () => {
 		setInGame(!inGame)
 		setGameQuestions(questions.filter(question => question.difficulty === gameDifficulty))
-	}
-	
-const handleAnswerChange = (e) => {setCurrentAnswer(...currentAnswer, e.target.value)}
-	
-	
-	const handleAnswersSubmit = (e, answer) => {
-		e.preventDefault();
-		
-		setGameAnswers([...gameAnswers, answer]);
-		if (answer.toLowerCase() === e.answer.toLowerCase()) {
-			setNumberCorrect(numberCorrect + 1)
 		}
-	}
+
 	
 	return (
    <section>
@@ -37,21 +27,10 @@ const handleAnswerChange = (e) => {setCurrentAnswer(...currentAnswer, e.target.v
         <div>
           <h1>In Game</h1>
 						<Timer />
-					<div>
-						{gameQuestions.map(question => (
-						<form onSubmit={handleAnswersSubmit}>
-							<p>{question.question}</p>
-							<p>A: {question.a}</p>
-                <p>B: {question.b}</p>
-                <p>C: {question.c}</p>
-                <p>D: {question.d}</p>
-								Answer:<input onChange={handleAnswerChange}type="text" name="answer" value={currentAnswer}></input>
-						</form>))}
-					</div>
-          <button onClick={handleStart}>End Game</button>
+					<GamePlay gameQuestions={gameQuestions}  />
+          <button onClick={handleStart}>Restart Game</button>
 			</div>
 			) : (
-					
 					
 					
 					
@@ -75,7 +54,7 @@ const handleAnswerChange = (e) => {setCurrentAnswer(...currentAnswer, e.target.v
           </form>
           <button onClick={handleStart}> Start Trivia! </button>
         </div>
-      )}
+			)}
     </section>
   );
 }

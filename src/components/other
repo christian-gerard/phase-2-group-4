@@ -18,3 +18,8 @@
 										<option value="hard">Hard</option>
 							</select>
 						</form>
+						
+						
+						const handleFirstQuestion = () => { gameQuestions.find(question => gameQuestions[0].id === question.id) 
+							
+							firstQuestion={handleFirstQuestion()}

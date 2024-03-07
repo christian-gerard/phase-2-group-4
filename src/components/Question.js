@@ -12,7 +12,7 @@ function Question() {
     const [filter, setFilter] = useState('')
     const [page,setPage] = useState({
         start: 0,
-        stop: 9
+        stop: 15
     })
 
     //Function Declarations
@@ -25,11 +25,11 @@ function Question() {
 
         if(filter && page.stop <= renderPreviews.length ) {
 
-            setPage({...page, start: page.start + 9, stop: page.stop + 9})
+            setPage({...page, start: page.start + 15, stop: page.stop + 15})
 
         } else if (!filter && page.stop <= questions.length) {
 
-            setPage({...page, start: page.start + 9, stop: page.stop + 9})
+            setPage({...page, start: page.start + 15, stop: page.stop + 15})
         }
 
 

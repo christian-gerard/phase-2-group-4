@@ -14,7 +14,7 @@
     {
       "id": "2",
       "category": "General Knowledge",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "question": "What year was the PlayStation 3 released?",
       "a": "2002",
       "b": "1999",
@@ -274,6 +274,17 @@
       "c": "Jared Leto",
       "d": "Mark Hamill",
       "answer": "b"
+    },
+    {
+      "id": "29a5",
+      "category": "General Knowledge",
+      "difficulty": "hard",
+      "question": "What is git?",
+      "a": "Version Control",
+      "b": "Data Type",
+      "c": "Programming Language",
+      "d": "IDE",
+      "answer": "a"
     }
   ]
 }

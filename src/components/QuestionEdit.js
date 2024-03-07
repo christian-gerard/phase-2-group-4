@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+
+
 function QuestionEdit({id,question,difficulty,category,a,b,c,d,answer,handleQuestionPatch,handleEditMode}) {
     
     // Declare the initial value of the edited question
@@ -22,13 +24,14 @@ function QuestionEdit({id,question,difficulty,category,a,b,c,d,answer,handleQues
     const handleQuestionChange = (event) => {
         
         setNewQuestion({ ...newQuestion, [event.target.name]: event.target.value })
-    
-    }
+
+    }   
 
     return (
 
 
         <div >
+
         <form 
         className='edit-question'
         onChange={handleQuestionChange}

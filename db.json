@@ -69,7 +69,7 @@
     {
       "id": "7",
       "category": "Sports",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "question": "What number jersey is Drew Brees of the Saints?",
       "a": "6",
       "b": "1",
@@ -274,17 +274,6 @@
       "c": "Jared Leto",
       "d": "Mark Hamill",
       "answer": "b"
-    },
-    {
-      "id": "29a5",
-      "category": "General Knowledge",
-      "difficulty": "hard",
-      "question": "What is git?",
-      "a": "Version Control",
-      "b": "Data Type",
-      "c": "Programming Language",
-      "d": "IDE",
-      "answer": "a"
     }
   ]
 }

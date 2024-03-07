@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const CountdownTimer = () => {
  const [time, setTime] = useState({
-   minutes: 10,
+   minutes: 2,
    seconds: 0
  });
 

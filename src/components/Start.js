@@ -12,12 +12,13 @@ function Start() {
 	const [inGame, setInGame] = useState(false);
 	const [gameQuestions, setGameQuestions] = useState([]);
 	const [gameDifficulty, setGameDifficulty] = useState('easy');
-
+ 
 	const handleGameDifficultyChange = (e) => { setGameDifficulty(e.target.value) }
 	
 	const handleStart = () => {
 		setInGame(!inGame)
-		setGameQuestions(questions.filter(question => question.difficulty === gameDifficulty))
+		setGameQuestions(questions.filter(question => question.difficulty === gameDifficulty))	
+		
 		}
 
 	
@@ -27,7 +28,9 @@ function Start() {
         <div>
           <h1>In Game</h1>
 						<Timer />
-					<GamePlay gameQuestions={gameQuestions}  />
+					<GamePlay gameQuestions={gameQuestions} />
+					<br>
+					</br>
           <button onClick={handleStart}>Restart Game</button>
 			</div>
 			) : (
@@ -44,14 +47,14 @@ function Start() {
 						
 						
           <form onChange={handleGameDifficultyChange}>
-            <label htmlFor="type">Choose Difficulty</label>
+            <label htmlFor="difficulty">Choose Difficulty</label>
             <select name="difficulty">
               <option value="">Select One</option>
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
-          </form>
+          </form><br></br>
           <button onClick={handleStart}> Start Trivia! </button>
         </div>
 			)}

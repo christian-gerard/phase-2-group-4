@@ -4,49 +4,89 @@ import {useParams,  useOutletContext } from 'react-router-dom';
 import Start from './Start'
 
 function GamePlay(props) {
-	const params = useParams();
+	//const params = useParams();
 	const gameQuestions = props.gameQuestions
+	const [numberOfGameQuestions, setNumberOfGameQuestions] = useState(gameQuestions.length);
 	const [currentQuestion, setCurrentQuestion] = useState(gameQuestions[0]);
-	const [numberCorrect, setNumberCorrect] = useState("")
+	const [selectedAnswer, setSelectedAnswer] = useState('');
+	const [numberCorrect, setNumberCorrect] = useState(0);
+	const [gameQuestionsCount, setGameQuestionsCount] = useState(numberOfGameQuestions);
+	
+	
+	const handleOptionChange = (e) => {
+		setSelectedAnswer(e.target.value)		
+	}
 	
 	const handleSubmitAnswer = (e) => {
 		e.preventDefault()
-	
-		if (currentQuestion.answer === e.target.value) {
-			console.log(e.target.value)
-			console.log(numberCorrect)
+	 	setGameQuestionsCount(gameQuestions.length)
+		if (selectedAnswer === currentQuestion.answer) {
 			setNumberCorrect(numberCorrect + 1)
-			setCurrentQuestion(gameQuestions.shift())
 		}
+		
+		if (gameQuestionsCount === 0) {
+			return (
+				<div>
+					<h1>Game Over!</h1>
+					<p>You got {numberCorrect} correct answers out of {numberOfGameQuestions} questions.</p>
+			</div>)
+		}
+		else {
+			setCurrentQuestion(gameQuestions.shift())
+	
+			setSelectedAnswer('')
+					}
 
-		else { setCurrentQuestion(gameQuestions.shift()) }
-    }
-	
-	
+	}
 
 	return (
-		<div>
-		<h1>Number Correct:{numberCorrect}</h1>
-		
+    <div>
+      <h1>Number Correct:{numberCorrect}</h1>
+<>
       <form onSubmit={handleSubmitAnswer}>
-				<p>{currentQuestion.question}</p>
-				<ul>
-	        <button className="buttonA" name="A" value="a">
-	          <label htmlFor="A">A.</label>
-	          {currentQuestion.a}
-	        </button>
-	        <button className="buttonB" name="B" value="b">
-	          <label htmlFor="B">`B.{currentQuestion.b}`</label>
-	        </button>
-	        <button className="buttonC" name="C" value="c">
-	          <label htmlFor="C">`C.{currentQuestion.c}`</label>
-	        </button>
-	        <button className="buttonD" name="D" value="d">
-	          <label htmlFor="D">`D.{currentQuestion.d}`</label>
-	        </button></ul>
-      </form>
-   </div>
-			);
+        <p>{currentQuestion.question}</p>
+						<ul>
+							<li><label>
+			          <input
+			            type="radio"
+			            value="a"
+			            checked={selectedAnswer === "a"}
+			            onChange={handleOptionChange}
+			          />
+			          A. {currentQuestion.a}
+		        	</label></li>
+        			<li><label>
+			          <input
+			            type="radio"
+			            value="b"
+			            checked={selectedAnswer === "b"}
+			            onChange={handleOptionChange}
+			          />
+			          B. {currentQuestion.b}
+		       		</label></li>
+			        <li><label>
+			          <input
+			            type="radio"
+			            value="c"
+			            checked={selectedAnswer === "c"}
+			            onChange={handleOptionChange}
+			          />
+			          C. {currentQuestion.c}
+			        </label></li>	
+				        <li><label>
+				          <input
+				            type="radio"
+				            value="d"
+				            checked={selectedAnswer === "d"}
+				            onChange={handleOptionChange}
+				          />
+				          D. {currentQuestion.d}
+						</label></li>
+					</ul>
+				<button className="answer-button" type="submit">Submit Answer</button>
+      </form></>
+    </div>
+  );
 
 }
 export default GamePlay

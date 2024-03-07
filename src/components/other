@@ -42,4 +42,11 @@
 		            {numberOfGameQuestions} questions.
 		          </p>
 		        </div>
-		      );
+		      );if (gameQuestions.length === 0) {
+			
+			return (<GameOver
+				numberCorrect={numberCorrect}
+				numberOfGameQuestions={numberOfGameQuestions} />
+			)
+		}
+		else {

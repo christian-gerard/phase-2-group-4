@@ -25,7 +25,7 @@ function Start() {
       {inGame ? (
         <div>
           <h2><Timer /></h2>
-					<GamePlay gameQuestions={gameQuestions} />
+					<GamePlay gameQuestions={gameQuestions}/>
 					<br>
 					</br>
           <button onClick={handleStart}>Restart Game</button>
@@ -48,7 +48,7 @@ function Start() {
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
-          </form><br></br>
+          </form>
           <button onClick={handleStart}> Start Trivia! </button>
         </div>
 			)}
